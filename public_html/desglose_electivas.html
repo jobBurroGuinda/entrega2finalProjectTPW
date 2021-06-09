@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Desglose de electivas</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="startmin-master/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="startmin-master/css/metisMenu.min.css" rel="stylesheet">
+
+        <!-- Timeline CSS -->
+        <link href="startmin-master/css/timeline.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="startmin-master/css/startmin.css" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="startmin-master/css/morris.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="startmin-master/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">Electivas</a> <!--En este apartado le puedes poner el link de la pagina principal del trabajo de-->
+                </div>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <ul class="nav navbar-nav navbar-left navbar-top-links">
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i> Perenganito</a></li>
+                </ul>
+
+                <ul class="nav navbar-right navbar-top-links">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i> Opciones <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i> Perfil de usuario</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuraciones</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Cerrar sesión</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /.navbar-top-links -->
+                <!-- /.navbar-top-links -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                            <li>
+                                    <a href="dashboard.html"><i class="fa fa-home fa-fw"></i> Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="desglose_electivas.html" class="active"><i class="fa fa-bar-chart fa-fw"></i> Desgloce de creditos</a>
+                                </li>
+                                <li>
+                                    <a href="alta_constancia.html"><i class="fa fa-file fa-fw"></i> Alta de constancia</a>
+                                </li>
+                                <li>
+                                    <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Salir</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="page-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-24">
+                            <h1 class="page-header"> Desglose de electivas</h1>
+                        </div>
+                        <!-- /.col-lg-12 -->
+                    </div>
+                    <!-- /.row -->
+                    
+                        <!--division-->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTitle">Desglose de creditos acumulados</a>
+                                    </div>
+                                    <!-- .panel-heading -->
+                                    <div id="collapseTitle" class="panel-collapse collapse">
+                                      <div class="panel-body">
+                                        <div class="panel-group" id="accordion">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Electiva #1</a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseOne" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <!---->
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                    </div>
+                                                                    <!-- /.panel-heading -->
+                                                                    <div class="panel-body">
+                                                                        <div class="table-responsive">
+                                                                            <table class="table table-striped table-bordered table-hover">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>Constancia</th>
+                                                                                        <th>Eje temático</th>
+                                                                                        <th>Modalidad</th>
+                                                                                        <th>Horas totales</th>
+                                                                                        <th>Horas usadas</th>
+                                                                                        <th>Equivalente en horas</th>
+                                                                                        <th>Crèditos</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>Curso de React</td>
+                                                                                        <td>Ènfasis de la profesiòn</td>
+                                                                                        <td>Docencia</td>
+                                                                                        <td>40</td>
+                                                                                        <td>40</td>
+                                                                                        <td>16</td>
+                                                                                        <td>2.5</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>Curso de Android</td>
+                                                                                        <td>Ènfasis en la profesion</td>
+                                                                                        <td>Docencia</td>
+                                                                                        <td>64</td>
+                                                                                        <td>56</td>
+                                                                                        <td>16</td>
+                                                                                        <td>3.5</td>
+                                                                                    </tr>
+
+                                                                                </tbody>
+                                                                                <tfoot>
+                                                                                    <tr>
+                                                                                        <td colspan="6">Total</td>
+                                                                                        <td>6.0</td>
+                                                                                    </tr>
+                                                                                </tfoot>
+                                                                            </table>
+                                                                        </div>
+                                                                        <!-- /.table-responsive -->
+                                                                    </div>
+                                                                    <!-- /.panel-body -->
+                                                                </div>
+                                                                <!-- /.panel -->
+                                                            </div>
+                                                            <!-- /.col-lg-6 -->
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Electiva #2</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseTwo" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <!---->
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                        </div>
+                                                                        <!-- /.panel-heading -->
+                                                                        <div class="panel-body">
+                                                                            <div class="table-responsive">
+                                                                                <table class="table table-striped table-bordered table-hover">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Constancia</th>
+                                                                                            <th>Eje temàtico</th>
+                                                                                            <th>Modalidad</th>
+                                                                                            <th>Horas totales</th>
+                                                                                            <th>Horas usadas</th>
+                                                                                            <th>Equivalente en horas</th>
+                                                                                            <th>Crèditos</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td>Curso de React</td>
+                                                                                            <td>Ènfasis de la profesiòn</td>
+                                                                                            <td>Docencia</td>
+                                                                                            <td>40</td>
+                                                                                            <td>40</td>
+                                                                                            <td>16</td>
+                                                                                            <td>2.5</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>Curso de Android</td>
+                                                                                            <td>Ènfasis en la profesion</td>
+                                                                                            <td>Docencia</td>
+                                                                                            <td>64</td>
+                                                                                            <td>56</td>
+                                                                                            <td>16</td>
+                                                                                            <td>3.5</td>
+                                                                                        </tr>
+
+                                                                                    </tbody>
+                                                                                    <tfoot>
+                                                                                        <tr>
+                                                                                            <td colspan="6">Total</td>
+                                                                                            <td>6.0</td>
+                                                                                        </tr>
+                                                                                    </tfoot>
+                                                                                </table>
+                                                                            </div>
+                                                                            <!-- /.table-responsive -->
+                                                                        </div>
+                                                                        <!-- /.panel-body -->
+                                                                    </div>
+                                                                    <!-- /.panel -->
+                                                                    <!---->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <h4 class="panel-title">
+                                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Electiva #3</a>
+                                                                </h4>
+                                                            </div>
+                                                            <div id="collapseThree" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-12">
+                                                                            <div class="panel panel-default">
+                                                                                <div class="panel-heading">
+                                                                                </div>
+                                                                                <!-- /.panel-heading -->
+                                                                                <div class="panel-body">
+                                                                                    <div class="table-responsive">
+                                                                                        <table class="table table-striped table-bordered table-hover">
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <th>Constancia</th>
+                                                                                                    <th>Eje temàtico</th>
+                                                                                                    <th>Modalidad</th>
+                                                                                                    <th>Horas totales</th>
+                                                                                                    <th>Horas usadas</th>
+                                                                                                    <th>Equivalente en horas</th>
+                                                                                                    <th>Crèditos</th>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td>Curso de React</td>
+                                                                                                    <td>Ènfasis de la profesiòn</td>
+                                                                                                    <td>Docencia</td>
+                                                                                                    <td>40</td>
+                                                                                                    <td>40</td>
+                                                                                                    <td>16</td>
+                                                                                                    <td>2.5</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td>Curso de Android</td>
+                                                                                                    <td>Ènfasis en la profesion</td>
+                                                                                                    <td>Docencia</td>
+                                                                                                    <td>64</td>
+                                                                                                    <td>56</td>
+                                                                                                    <td>16</td>
+                                                                                                    <td>3.5</td>
+                                                                                                </tr>
+
+                                                                                            </tbody>
+                                                                                            <tfoot>
+                                                                                                <tr>
+                                                                                                    <td colspan="6">Total</td>
+                                                                                                    <td>6.0</td>
+                                                                                                </tr>
+                                                                                            </tfoot>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                    <!-- /.table-responsive -->
+                                                                                </div>
+                                                                                <!-- /.panel-body -->
+                                                                            </div>
+                                                                            <!-- /.panel -->
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- .panel-body -->
+                                                    </div>
+                                                    <!-- /.panel -->
+                                                </div>
+                                                <!-- /.col-lg-12 -->
+                                            </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- division-->
+                        <!-- /#wrapper -->
+                        <!-- jQuery -->
+                        <script src="startmin-master/js/jquery.min.js"></script>
+
+                        <!-- Bootstrap Core JavaScript -->
+                        <script src="startmin-master/js/bootstrap.min.js"></script>
+
+                        <!-- Metis Menu Plugin JavaScript -->
+                        <script src="startmin-master/js/metisMenu.min.js"></script>
+
+                        <!-- Morris Charts JavaScript -->
+                        <script src="startmin-master/js/raphael.min.js"></script>
+                        <script src="startmin-master/js/morris.min.js"></script>
+                        <script src="startmin-master/js/morris-data.js"></script>
+
+                        <!-- Custom Theme JavaScript -->
+                        <script src="startmin-master/js/startmin.js"></script>
+
+</body>
+</html>

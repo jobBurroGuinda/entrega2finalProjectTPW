@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Alta de constancias</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="startmin-master/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="startmin-master/css/metisMenu.min.css" rel="stylesheet">
+
+        <!-- DataTables CSS -->
+        <link href="startmin-master/css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+
+        <!-- DataTables Responsive CSS -->
+        <link href="startmin-master/css/dataTables/dataTables.responsive.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="startmin-master/css/startmin.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="startmin-master/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+
+            <link rel="stylesheet" href="assets/alertifyjs/css/alertify.css">  
+            <link rel="stylesheet" href="assets/alertifyjs/css/alertify.min.css">  
+            <link rel="stylesheet" href="assets/alertifyjs/css/themes/default.css">  
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+            table.dataTable thead {
+                background: #007bff;
+                color:white;
+            }
+
+            .caja{
+            /* border: 1px solid; */
+            padding: 5px;
+            box-shadow: 10px 10px 50px 1px #7c7c81;
+            border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">Electivas</a>
+                </div>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <ul class="nav navbar-nav navbar-left navbar-top-links">
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i> Perenganito</a></li>
+                </ul>
+
+                <ul class="nav navbar-right navbar-top-links">
+                   
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i> Opciones <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i> Perfil de usuario</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuraciones</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Cerrar sesión</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /.navbar-top-links -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                           
+
+
+                        
+
+                            <!--Menu Sidebar-->
+                            
+                            <li>
+                                <a href="dashboard.html"><i class="fa fa-home fa-fw"></i> Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="desglose_electivas.html"><i class="fa fa-bar-chart fa-fw"></i> Desgloce de creditos</a>
+                            </li>
+                            <li>
+                                <a href="alta_constancia.html" class="active"><i class="fa fa-file fa-fw"></i> Alta de constancia</a>
+                            </li>
+                            <li>
+                                <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Salir</a>
+                            </li>
+                            <!--
+                            <li class="nav-item">
+                                <a href="ejercicio7_KASH.html" class="nav-link ">
+                                  <p>
+                                    CRUD
+                                  </p>
+                                </a>
+                              </li> -->
+                            
+                            
+                            
+                           
+                        </ul>
+                    </div>
+                    <!-- /.sidebar-collapse -->
+                </div>
+                <!-- /.navbar-static-side -->
+            </nav>
+
+            <div id="page-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">Constancias</h1>
+                        </div>
+                        <!-- /.col-lg-12 -->
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">            
+                                <button id="btnNuevo" type="button" class="btn btn-info" data-toggle="modal"><i class="material-icons">library_add</i></button>    
+                                </div>    
+                            </div>    
+                        </div>    
+                        <br>  
+                    
+                        <div class="container caja">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                <div class="table-responsive">        
+                                    <table id="tablaUsuarios" class="table table-striped table-bordered table-condensed"  style="width: 100%;">
+                                        <thead class="text-center">
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Actividad</th>
+                                                <th>Inicio</th>
+                                                <th>Termino</th>                                
+                                                <th>Horas</th>  
+                                                <th>Archivo</th>
+                                                <th>Observaciones</th>
+                                                <th>Status</th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>                           
+                                        </tbody>        
+                                    </table>               
+                                </div>
+                                </div>
+                            </div>  
+                        </div>   
+                     
+                    
+                    <!--Modal para CRUD-->
+                    <div class="modal fade" id="modalCRUD" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Subir constancia</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            <form id="formConstancias">    
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                        <div class="form-group">
+                                        <label for="" class="col-form-label">Nombre de la actividad</label>
+                                        <input required type="text" placeholder="Digite el nombre de la actividad" class="form-control" id="actividad">
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                        <div class="form-group">
+                                        <label for="" class="col-form-label">Fecha de inicio</label>
+                                        <input required type="date" class="form-control" id="inicio">
+                                        </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                        <div class="form-group">
+                                        <label for="" class="col-form-label">Fecha de termino</label>
+                                        <input required type="date" class="form-control" id="termino">
+                                        </div> 
+                                        </div>    
+                                    </div>
+                                    <div class="row"> 
+                                        <div class="col-lg-6">
+                                        <div class="form-group">
+                                        <label for="" class="col-form-label">Horas</label>
+                                        <input required type="number" class="form-control" id="horas">
+                                        </div>               
+                                        </div>
+                                        <div class="col-lg-6">
+                                        <div class="form-group">
+                                        <label for="" class="col-form-label">Archivo</label>
+                                        <input required type="text" placeholder="constancia1.pdf" class="form-control" id="archivo">
+                                        </div>
+                                        </div>  
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                            <label for="" class="col-form-label">Comentarios</label>
+                                            <textarea placeholder="Ingrese las observaciones que considere necesarias" type="text" class="form-control" id="comentarios"></textarea>
+                                            </div>
+                                        </div>    
+                                    </div>                
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+                                    <button type="submit" id="btnGuardar" class="btn btn-dark">Guardar</button>
+                                </div>
+                            </form>    
+                            </div>
+                        </div>
+                    </div>  
+                    </div>
+                    <!-- /.row -->
+                   
+                    <!-- /.row -->
+                   
+                    <!-- /.row -->
+                    
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /#page-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- jQuery -->
+        <script src="startmin-master/js/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="startmin-master/js/bootstrap.min.js"></script>
+        <script src="assets/popper/popper.min.js"></script>
+
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="startmin-master/js/metisMenu.min.js"></script>
+
+        <!-- DataTables JavaScript -->
+        <script src="startmin-master/js/dataTables/jquery.dataTables.min.js"></script>
+        <script src="startmin-master/js/dataTables/dataTables.bootstrap.min.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="startmin-master/js/startmin.js"></script>
+        <!-- Page specific script -->
+        <script src="alta_constancia.js"></script>
+        <script type="text/javascript" src="assets/alertifyjs/alertify.js"></script>  
+    <script type="text/javascript">
+            $(document).on("click", ".btnBorrar", function(){
+                fila = $(this);           
+                var c_id = parseInt($(this).closest('tr').find('td:eq(0)').text()) ;        
+                var opcion = 3; //eliminar        
+                alertify.confirm("¿Seguro?", "¿Está seguro de borrar el registro "+c_id+"?",
+                  function(){
+                    $.ajax({
+                      url: "bd/crud.php",
+                      type: "POST",
+                      datatype:"json",    
+                      data:  {opcion:opcion, c_id:c_id},    
+                      success: function() {
+                          tablaUsuarios.row(fila.parents('tr')).remove().draw();                  
+                       }
+                    }); 
+                    alertify.success('Eliminado');
+                  },
+                  function(){
+                    alertify.error('Cancelado');
+                  });
+            });
+    </script>
+
+        <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+        
+
+
+       
+
+    </body>
+</html>
